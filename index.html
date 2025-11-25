@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Jogo da Velha - aula 1</h1>
+            <div class="controls">
+                <div class="choice">
+                    <label class="small">Escolha:</label>
+                    <label><input type="radio" name="playerChoice" value="X" checked> X</label>
+                    <label><input type="radio" name="playerChoice" value="O"> O</label>
+                </div>
+                <div class="choice">
+                    <label class="small">Meta de pontos:</label>
+                    <input id="targetPoints" type="number" value="5" min="1">
+                </div>
+            </div>
+        </header>
+
+
+        <div class="board-area">
+            <div id="board" class="board" aria-label="Tabuleiro"></div>
+
+
+
+            <aside class="sidebar">
+                <div class="score">
+                    <h2>Placar</h2>
+                    <div class="players">
+                        <div class="player">
+                            <div class="name">Jogador X</div>
+                            <div id="scoreX" class="pts">0</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="actions">
+                    <button id="restartBtn" class="btn"><img id="restartImg" src="img/resetBtn.jpg" alt=""> Reiniciar rodada</button>
+                    <button id="resetAll" class="btn btn--ghost">Zerar placar</button>
+                    <div class="small">Vez: <strong id="turnLabel">X</strong></div>
+                    <div id="message" class="small" aria-live="polite"></div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
